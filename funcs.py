@@ -3,7 +3,7 @@ from datos import get_juegos, get_usuarios
 from datetime import datetime
 from Usuario import Usuario
 
-def login()-> bool:
+def login()-> tuple:
     lista_usuarios=get_usuarios()
 
     for i in range(3):
@@ -21,7 +21,7 @@ def login()-> bool:
             contrasenha=input("Introduce tu contraseña: ")
 
             if contrasenha == usuario.contra:
-                return True
+                return True, usuario
             
             else:
                 print(f"La contraseña es incorrecta\n")
