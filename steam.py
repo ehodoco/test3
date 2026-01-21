@@ -1,10 +1,14 @@
-import funcs
+from funcs import *
 
-dinero=0 #pobre :(
+autenticado = login()
 
-while True:
-    funcs.print_menu()
+while autenticado:
+    print_menu()
 
-    print(f"Actualmente tienes {dinero}€")
+    print(f"Actualmente tienes sero€")
 
-    input()
+    input_usuario=input()
+
+    match input_usuario:
+        case 1:
+            die
